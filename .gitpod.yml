@@ -4,9 +4,10 @@ image:
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
     command: 'echo "TODO: Replace with command to start project"'
-  - name: DDEV
+  - name: install
     init: brew tap drud/ddev && brew install ddev
   - name: docker
-    command: sudo docker-up
-    command: ddev start
+  - command: sudo docker-up
+  - name: ddev
+  - command: ddev start
 
