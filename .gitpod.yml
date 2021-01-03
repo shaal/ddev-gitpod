@@ -2,16 +2,28 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: ddev-install
+  - name: ddev_install
     init: |
       touch /tmp/.ddev-lock
       brew tap drud/ddev && brew install ddev
       rm /tmp/.ddev-lock
-  - name: docker-up
+  - name: docker_up
     command: sudo docker-up
-  - name: ddev-run
+  - name: ddev_run
     init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
     command: ddev start
+
+# tasks:
+#   - name: ddev-install
+#     init: |
+#       touch /tmp/.ddev-lock
+#       brew tap drud/ddev && brew install ddev
+#       rm /tmp/.ddev-lock
+#   - name: docker-up
+#     command: sudo docker-up
+#   - name: ddev-run
+#     init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
+#     command: ddev start
 
 # tasks:
 #   - init: 'echo "TODO: Replace with init/build command"'
