@@ -1,0 +1,55 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: ddev_install
+    init: |
+      touch /tmp/.ddev-lock
+      brew tap drud/ddev && brew install ddev
+      rm /tmp/.ddev-lock
+  - name: docker_up
+    command: sudo docker-up
+  - name: ddev_run
+    init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
+    command: ddev start
+
+# tasks:
+#   - name: ddev-install
+#     init: |
+#       touch /tmp/.ddev-lock
+#       brew tap drud/ddev && brew install ddev
+#       rm /tmp/.ddev-lock
+#   - name: docker-up
+#     command: sudo docker-up
+#   - name: ddev-run
+#     init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
+#     command: ddev start
+
+# tasks:
+#   - init: 'echo "TODO: Replace with init/build command"'
+#     command: 'echo "TODO: Replace with command to start project"'
+#   - name: install
+#     init: brew tap drud/ddev && brew install ddev
+#   - name: docker
+#   - command: sudo docker-up
+#   - name: ddev
+#   - command: ddev start
+
+github:
+  prebuilds:
+    # enable for the master/default branch (defaults to true)
+    master: true
+    # enable for all branches in this repo (defaults to false)
+    branches: true
+    # enable for pull requests coming from this repo (defaults to true)
+    pullRequests: true
+    # enable for pull requests coming from forks (defaults to false)
+    pullRequestsFromForks: true
+    # add a check to pull requests (defaults to true)
+    addCheck: true
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+    addComment: true
+    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
+    addBadge: true
+    # add a label once the prebuild is ready to pull requests (defaults to false)
+    addLabel: true
