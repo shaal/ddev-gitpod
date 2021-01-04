@@ -10,10 +10,10 @@ tasks:
   #     brew tap drud/ddev && brew install ddev
   #     rm /tmp/.ddev-lock
   - name: docker_up
-    command: sudo docker-up
+    init: sudo docker-up
   - name: ddev_run
     # init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
-    command: |
+    init: |
       sleep 5
       ddev config global --instrumentation-opt-in=true
       ddev start
