@@ -4,15 +4,15 @@ image:
 # Use 'lock file' to delay running ddev until it is installed
 # https://www.gitpod.io/blog/gitpodify/#running-init-scripts
 tasks:
-  - name: ddev_install
-    init: |
-      touch /tmp/.ddev-lock
-      brew tap drud/ddev && brew install ddev
-      rm /tmp/.ddev-lock
+  # - name: ddev_install
+  #   init: |
+  #     touch /tmp/.ddev-lock
+  #     brew tap drud/ddev && brew install ddev
+  #     rm /tmp/.ddev-lock
   - name: docker_up
     command: sudo docker-up
   - name: ddev_run
-    init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
+    # init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
     command: ddev start
 
 github:
