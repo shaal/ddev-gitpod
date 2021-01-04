@@ -13,8 +13,9 @@ tasks:
     command: sudo docker-up
   - name: ddev_run
     # init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
-    init: ddev config global --instrumentation-opt-in=true
-    command: ddev start
+    command: |
+      ddev config global --instrumentation-opt-in=true
+      ddev start
 
 github:
   prebuilds:
