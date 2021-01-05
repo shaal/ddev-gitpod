@@ -11,7 +11,7 @@ additional_fqdns: []
 mariadb_version: "10.3"
 mysql_version: ""
 provider: default
-use_dns_when_possible: true
+use_dns_when_possible: false
 composer_version: ""
 
 
