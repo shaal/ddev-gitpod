@@ -15,6 +15,7 @@ tasks:
     # init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
     init: |
       sleep 5
+      mkcert -install
       ddev config global --instrumentation-opt-in=true
       ddev start
 
