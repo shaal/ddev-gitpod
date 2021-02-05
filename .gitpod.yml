@@ -17,16 +17,11 @@ tasks:
     command: |
       sleep 5
       mkcert -install
-    # opt-in by default, to skip interactive question
       ddev config global --instrumentation-opt-in=true
-    # bind router to all network interfaces
       ddev config global --router-bind-all-interfaces=true
-    # Gitpod ports follow this pattern: [port]-[gitpod_workspace_name]
-    # Add gitpod ports to ddev
       ddev config --additional-fqdns=$(gp url 8000)
       ddev config --additional-fqdns=$(gp url 8025)
       ddev config --additional-fqdns=$(gp url 8036)
-    # start ddev
       ddev start
 
 github:
