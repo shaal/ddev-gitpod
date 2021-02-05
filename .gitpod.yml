@@ -17,6 +17,7 @@ tasks:
       sleep 5
       mkcert -install
       ddev config global --instrumentation-opt-in=true
+      ddev config global --router-bind-all-interfaces=true
       ddev start
 
 github:
