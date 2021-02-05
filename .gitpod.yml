@@ -20,7 +20,7 @@ tasks:
       ddev config global --instrumentation-opt-in=true
       ddev config global --router-bind-all-interfaces=true
       fullgpurl=$(gp url 8000)
-      gpurl=${fullurl#"https://8000-"}
+      gpurl=${fullgpurl#"https://8000-"}
       ddev config --additional-fqdns=8000-$gpurl
       ddev config --additional-fqdns=8025-$gpurl
       ddev config --additional-fqdns=8036-$gpurl
