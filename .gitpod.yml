@@ -9,6 +9,7 @@ tasks:
   #     touch /tmp/.ddev-lock
   #     brew tap drud/ddev && brew install ddev
   #     rm /tmp/.ddev-lock
+  - init: composer install
   - name: docker_up
     command: sudo docker-up
   - name: ddev_run
