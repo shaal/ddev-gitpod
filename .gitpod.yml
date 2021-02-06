@@ -20,6 +20,7 @@ tasks:
       ddev config global --instrumentation-opt-in=true
       ddev config global --router-bind-all-interfaces=true
       ddev start
+      ddev drush si demo_umami -y
 
 # Make the following ports public
 ports:
