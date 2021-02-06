@@ -19,12 +19,15 @@ tasks:
       mkcert -install
       ddev config global --instrumentation-opt-in=true
       ddev config global --router-bind-all-interfaces=true
-      fullgpurl=$(gp url 8000)
-      gpurl=${fullgpurl#"https://8000-"}
-      ddev config --additional-fqdns=8000-$gpurl
-      ddev config --additional-fqdns=8025-$gpurl
-      ddev config --additional-fqdns=8036-$gpurl
       ddev start
+
+# Make the following ports public
+ports:
+  - port: 8000
+  - port: 8025
+    onOpen: ignore
+  - port: 8036
+    onOpen: ignore
 
 github:
   prebuilds:
