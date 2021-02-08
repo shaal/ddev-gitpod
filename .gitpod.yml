@@ -19,12 +19,13 @@ tasks:
       mkcert -install
       ddev config global --instrumentation-opt-in=true
       ddev config global --router-bind-all-interfaces=true
+      .ddev/generate-fqdns.sh
+      .ddev/generate-xdebug-host-ip.sh
       ddev start
-      ddev drush si demo_umami -y
 
 # Make the following ports public
 ports:
-  - port: 8000
+  - port: 8080
   - port: 8025
     onOpen: ignore
   - port: 8036
