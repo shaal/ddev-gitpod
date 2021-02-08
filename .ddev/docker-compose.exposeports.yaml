@@ -1,9 +1,0 @@
-version: "3.6"
-services:
-  web:
-    ports:
-      - "8000:80"
-      - "8025:8025"
-  dba:
-    ports:
-      - "8036:80"
