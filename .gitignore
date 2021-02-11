@@ -200,3 +200,7 @@ circleci/database/*
 
 # DDev
 /web/sites/default/drushrc.php
+
+# Gitpod
+.ddev/docker-compose.xdebug-ip.yaml
+.ddev/config.fqdns.yaml
