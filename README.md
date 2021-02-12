@@ -1,9 +1,9 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/shaal/ddev-gitpod)
 
 # ddev + Gitpod
-## Running local environment on the cloud
+## Running Drupal development environment on the cloud
 
-This project demonstrate setting up a full Drupal 9 development evironment utilizing ddev on Gitpod. 
+This project demonstrate a complete Drupal 9 development evironment, utilizing ddev and Gitpod. 
 
 ## Prerequisites:
 1. [Sign up for gitpod.io](https://gitpod.io/login)
@@ -20,7 +20,7 @@ This project demonstrate setting up a full Drupal 9 development evironment utili
 1. Open your website's URL in a browser, you should see Drupal installation screen.
 1. Run in terminal `ddev drush si demo_umami -y`
 1. Open your website's URL in a browser, you should see Drupal Umami demo.
-1. Type in terminal `ddev xdebug on`
+1. Run in terminal `ddev xdebug on`
 1. Open VScode's debugger, place a new breakpoint in `web/index.php`
 1. Open your website's URL in a browser.
 1. :tada:
