@@ -1,4 +1,4 @@
-name: ddevenv
+name: ddev-gitpod
 type: drupal9
 docroot: web
 php_version: "7.3"
