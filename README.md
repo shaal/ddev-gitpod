@@ -48,4 +48,4 @@ Thank you https://github.com/rfay for your endless patience and relentless suppo
 
 ### Future:
 * [Figure out storage solutions](https://www.gitpod.io/docs/self-hosted/latest/install/storage)
-* [PHPStorm as IDE on Gitpod] - (https://jetbrains.github.io/projector-client/mkdocs/latest/)
+* [PHPStorm as IDE on Gitpod](https://jetbrains.github.io/projector-client/mkdocs/latest/)
