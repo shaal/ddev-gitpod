@@ -1,5 +1,5 @@
 FROM gitpod/workspace-full
-SHELL /bin/bash
+SHELL ["/bin/bash", "-c"]
 # Install ddev
 RUN brew install drud/ddev-edge/ddev
 RUN mkdir -p ~/tmp/starter && pushd ~/tmp/starter && ddev config --auto && ddev start && delete -Oy
