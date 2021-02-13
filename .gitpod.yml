@@ -22,6 +22,7 @@ tasks:
       .ddev/generate-fqdns.sh
       .ddev/generate-xdebug-host-ip.sh
       ddev start
+  - prebuild: for item in $(ddev version | awk '/(drud\/|phpmyadmin)/ {print $2}'); do docker pull $item; done 
 
 # Make the following ports public
 ports:
