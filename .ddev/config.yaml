@@ -1,7 +1,7 @@
 name: ddev-gitpod
 type: drupal9
 docroot: web
-php_version: "7.3"
+php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "8080"
 router_https_port: "8443"
