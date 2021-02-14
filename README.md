@@ -1,9 +1,16 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/shaal/ddev-gitpod)
 
 # ddev + Gitpod
-## Running Drupal development environment on the cloud
+## Set up a full Drupal dev environment in a browser
 
-This project demonstrate a complete Drupal 9 development evironment, utilizing ddev and Gitpod. 
+This project demonstrate a complete Drupal 9 development evironment, utilizing ddev and Gitpod, through your browser.
+
+## Video Demo
+
+Watch a 5 minutes walktrhough video:
+
+[![Setup a full Drupal dev environment in a browser](https://user-images.githubusercontent.com/22901/107867673-c6fc7080-6e4a-11eb-81c9-542cd779026b.png)](http://www.youtube.com/watch?v=ifk5dF6rGy0 "")
+
 
 ## Prerequisites:
 1. [Sign up for gitpod.io](https://gitpod.io/login)
