@@ -9,8 +9,7 @@ This project demonstrate a complete Drupal 9 development evironment, utilizing d
 
 Watch a 5 minutes walktrhough video:
 
-[![Setup a full Drupal dev environment in a browser](https://user-images.githubusercontent.com/22901/107867673-c6fc7080-6e4a-11eb-81c9-542cd779026b.png)](http://www.youtube.com/watch?v=ifk5dF6rGy0 "")
-
+<a href="http://www.youtube.com/watch?v=ifk5dF6rGy0"><img src="https://user-images.githubusercontent.com/22901/107867673-c6fc7080-6e4a-11eb-81c9-542cd779026b.png" width=300 alt="Setup a full Drupal dev environment in a browser"></a>
 
 ## Prerequisites:
 1. [Sign up for gitpod.io](https://gitpod.io/login)
