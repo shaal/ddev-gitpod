@@ -1,7 +1,7 @@
 name: ddev-gitpod
 type: drupal9
 docroot: web
-php_version: "7.3"
+php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "8080"
 router_https_port: "8443"
@@ -12,7 +12,7 @@ mariadb_version: "10.3"
 mysql_version: ""
 provider: default
 use_dns_when_possible: false
-composer_version: ""
+composer_version: "2"
 
 
 # This config.yaml was created with ddev version v1.16.5
