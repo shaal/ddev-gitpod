@@ -16,8 +16,7 @@ tasks:
     # init: sleep 1 && while [ -f /tmp/.ddev-lock ]; do sleep 1; done
     command: |
       sleep 5
-      docker rm -f $(docker ps -aq) || true
-      docker rmi -f $(docker images -q) || true
+      docker rmi -f $(docker images | awk '/^drud\/ddev-webserver/ { print $3 }') || true
       mkcert -install
       ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
       .ddev/generate-fqdns.sh
