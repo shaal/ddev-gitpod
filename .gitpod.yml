@@ -9,7 +9,7 @@ tasks:
   #     touch /tmp/.ddev-lock
   #     brew tap drud/ddev && brew install ddev
   #     rm /tmp/.ddev-lock
-  # - init: composer install
+  - init: composer install
   - name: docker_up
     command: sudo docker-up
   - name: ddev_run
@@ -21,9 +21,6 @@ tasks:
       .ddev/generate-fqdns.sh
       .ddev/generate-xdebug-host-ip.sh
       ddev start
-  - prebuild: |
-      ddev composer install
-      for item in $(ddev version | awk '/(drud\/|phpmyadmin)/ {print $2}'); do docker pull $item; done
 
 # Make the following ports public
 ports:
