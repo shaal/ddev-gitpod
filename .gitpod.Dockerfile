@@ -1,7 +1,7 @@
 FROM gitpod/workspace-full
 SHELL ["/bin/bash", "-c"]
 # Install ddev
-RUN brew install drud/ddev-edge/ddev
+RUN brew update && brew install drud/ddev-edge/ddev
 
 # Install custom tools, runtimes, etc.
 # For example "bastet", a command-line tetris clone:
