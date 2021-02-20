@@ -19,7 +19,7 @@ tasks:
       docker rm -f $(docker ps -aq) || true
       docker rmi -f $(docker images -q) || true
       mkcert -install
-      ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
+      ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true --router-http-port=8080 --router-https-port=8443 --use-dns-when-possible=false
       .ddev/generate-fqdns.sh
       .ddev/generate-xdebug-host-ip.sh
       ddev start
