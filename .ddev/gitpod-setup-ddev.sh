@@ -2,11 +2,7 @@
 
 # Remove docker containers and specific docker images,
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
-docker rm -f $(docker ps -aq) || true
-images_found=$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent|dbserver)/ { print $3 }') || true
-if [[ "$images_found" ]]; then
-    docker rmi -f $images_found
-fi
+docker system prune --force
 
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
