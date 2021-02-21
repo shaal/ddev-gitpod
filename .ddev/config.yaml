@@ -1,22 +1,22 @@
 name: ddev-gitpod
 type: drupal9
 docroot: web
-php_version: "7.4"
+php_version: "7.3"
 webserver_type: nginx-fpm
-router_http_port: "8080"
-router_https_port: "8443"
+router_http_port: "80"
+router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
 mariadb_version: "10.3"
 mysql_version: ""
 provider: default
-use_dns_when_possible: false
-composer_version: "2"
+use_dns_when_possible: true
+composer_version: ""
 
 
-# This config.yaml was created with ddev version v1.16.5
-# webimage: drud/ddev-webserver:v1.16.3
+# This config.yaml was created with ddev version v1.16.6
+# webimage: drud/ddev-webserver:v1.16.6
 # dbimage: drud/ddev-dbserver-mariadb-10.2:v1.16.0
 # dbaimage: phpmyadmin:5
 # However we do not recommend explicitly wiring these images into the
