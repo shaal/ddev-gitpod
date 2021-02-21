@@ -10,3 +10,6 @@ echo $shortgpurl >> .ddev/config.fqdns.yaml
 
 echo -n ' - 8036-' >> .ddev/config.fqdns.yaml
 echo $shortgpurl >> .ddev/config.fqdns.yaml
+
+#cat >>-END > .ddev/config.fqdns.yaml
+#$shortgpurl - 8080
