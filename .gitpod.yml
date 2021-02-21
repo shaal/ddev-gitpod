@@ -4,6 +4,7 @@ image:
 # Use 'lock file' to delay running ddev until it is installed
 # https://www.gitpod.io/blog/gitpodify/#running-init-scripts
 tasks:
+  # Wait 5 seconds for `sudo docker-up` to run, before starting ddev 
   - name: ddev_run
     command: |
       sleep 5
