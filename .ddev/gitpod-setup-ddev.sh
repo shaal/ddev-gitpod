@@ -10,3 +10,5 @@ ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=tr
 .ddev/gitpod-generate-fqdns.sh
 .ddev/gitpod-generate-xdebug-host-ip.sh
 ddev start
+echo Your website is available at this url:
+echo $(gp url 8080)
