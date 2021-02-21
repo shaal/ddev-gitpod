@@ -1,17 +1,28 @@
 #!/usr/bin/env bash
 
+# Set up ddev for use on gitpod
+
+set -eu -o pipefail
+
+MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 # Remove docker containers and specific docker images,
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
-docker system prune --force
+docker rm -f $(docker ps -aq) || true
+images_found="$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent)/ { print $3 }')"
+if [[ ! -z "$images_found" ]]; then
+    docker rmi -f $images_found
+fi
+
 
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
 shortgpurl="${GITPOD_WORKSPACE_URL#'https://'}"
 
-cat >>CONFIGEND > .ddev/config.gitpod.yaml
+cat <<CONFIGEND > ${MYDIR}/config.gitpod.yaml
 #ddev-gitpod-generated
 router_http_port: 8080
-router_https:port: 8443
+router_https_port: 8443
 use_dns_when_possible: false
 
 additional_fqdns:
@@ -21,9 +32,10 @@ additional_fqdns:
 CONFIGEND
 
 # We need host.docker.internal inside the container,
-# So add it via docker-compose.xdebug-ip.yaml
+# So add it via docker-compose.host-docker-internal.yaml
 hostip=$(awk "\$2 == \"$HOSTNAME\" { print \$1; }" /etc/hosts)
-cat <<COMPOSEEND >.ddev/docker-compose.xdebug-ip.yaml
+
+cat <<COMPOSEEND >${MYDIR}/docker-compose.host-docker-internal.yaml
 #ddev-gitpod-generated
 version: "3.6"
 services:
@@ -38,4 +50,4 @@ ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=tr
 
 ddev start
 echo Your website is available at this url:
-echo $(gp url 8080)
+gp url 8080
