@@ -1,5 +1,5 @@
-# Remove specific docker images, because of gitpod bug
-images_found=$(docker images | awk '/^drud\/ddev-webserver/ { print $3 }')
+# Remove specific docker images, because of a gitpod bug
+images_found=$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent)/ { print $3 }')
 if [[ "$images_found" ]]; then
     docker rmi -f $images_found
 fi
