@@ -204,3 +204,4 @@ circleci/database/*
 # Gitpod
 .ddev/docker-compose.xdebug-ip.yaml
 .ddev/config.fqdns.yaml
+.ddev/config.gitpod-overrides.yaml
