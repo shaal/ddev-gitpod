@@ -6,7 +6,7 @@ set -eu -o pipefail
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# Remove docker containers and specific docker images,
+# Remove all docker containers and images,
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
 docker rm -f $(docker ps -aq) || true
 images_found="$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent)/ { print $3 }')"
