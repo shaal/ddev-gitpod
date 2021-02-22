@@ -10,7 +10,6 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
 docker system prune --force
 
-
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
 shortgpurl="${GITPOD_WORKSPACE_URL#'https://'}"
