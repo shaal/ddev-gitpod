@@ -8,7 +8,11 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Remove docker containers and specific docker images,
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
-docker rm -f $(docker ps -aq) || true
+containers_found="$(docker ps -aq)"
+if [[ ! -z "$containers_found" ]]; then
+    docker rm -f $containers_found || true
+fi
+
 images_found="$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent|dbserver)/ { print $3 }')"
 if [[ ! -z "$images_found" ]]; then
     docker rmi -f $images_found
