@@ -8,7 +8,6 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Remove all docker containers and images,
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
-docker rm -f $(docker ps -aq) || true
 docker system prune --force
 
 
