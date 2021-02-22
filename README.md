@@ -57,8 +57,10 @@ Watch a 5 minutes walkthrough video:
 [@rfay](https://github.com/rfay) for your endless patience and relentless support that made this project possible.
 
 
-### Known bugs:
-* [Workspace doesn't restart correctly](https://github.com/gitpod-io/gitpod/issues/3174)
+### Known issues:
+* Once these Gitpod issues get resolved, starting a workspace will happen much faster:
+    * [#2428 - `sudo docker-up` cannot run during prebuild](https://github.com/gitpod-io/gitpod/issues/2428)
+    * [#3174 - Permissions in docker images are lost during gitpod restore](https://github.com/gitpod-io/gitpod/issues/3174)
 
 ### Future:
 * [Figure out storage solutions](https://www.gitpod.io/docs/self-hosted/latest/install/storage)
