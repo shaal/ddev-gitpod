@@ -9,10 +9,7 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # Remove all docker containers and images,
 # because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
 docker rm -f $(docker ps -aq) || true
-images_found="$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent)/ { print $3 }')"
-if [[ ! -z "$images_found" ]]; then
-    docker rmi -f $images_found
-fi
+docker system prune --force
 
 
 # Generate a config.gitpod.yaml that adds the gitpod
