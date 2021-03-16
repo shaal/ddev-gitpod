@@ -6,7 +6,7 @@ RUN sudo apt-get update && sudo apt-get install -y python3 python3-pip libxext6 
 RUN pip3 install projector-installer
 # Fragile - will break when they change options
 #RUN printf "y\n" | projector
-RUN printf "y\n8\ny\n3\n" | projector install --no-auto-run
+#RUN printf "y\n8\nY\n\n" | projector install --no-auto-run
 
 # Install ddev
 RUN brew update && brew install drud/ddev/ddev
