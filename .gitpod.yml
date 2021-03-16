@@ -4,21 +4,19 @@ image:
 # Use 'lock file' to delay running ddev until it is installed
 # https://www.gitpod.io/blog/gitpodify/#running-init-scripts
 tasks:
-  - init:
-    command: |
-      sudo apt update && sudo apt install -y python3 python3-pip libxext6 libxrender1 libxtst6 libfreetype6 libxi6
-      pip3 install projector-installer --user
-      printf "8\ny\n3\n" | projector install & # Fragile - will break when they change options
-      composer install
   # Wait 5 seconds for `sudo docker-up` to run, before starting ddev
   - name: ddev_run
     command: |
       sleep 5
       .ddev/gitpod-setup-ddev.sh
+  - init:
+    command: |
+      composer install
+      sudo apt update && sudo apt install -y python3 python3-pip libxext6 libxrender1 libxtst6 libfreetype6 libxi6
+      pip3 install projector-installer --user
+      printf "8\ny\n3\n" | projector install & # Fragile - will break when they change options
   - name: docker_up
     command: sudo docker-up
-  - name: visible_bash
-    command: bash
 
 
 # Set the following ports public
