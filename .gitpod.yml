@@ -8,7 +8,7 @@ tasks:
   - name: ddev_run
     command: |
       # Wait for docker to come up before doing gitpod setup (make requires docker)
-      while ! docker ps; do
+      while ! docker ps >/dev/null 2&>1; do
         sleep 1
       done
       .ddev/gitpod-setup-ddev.sh
