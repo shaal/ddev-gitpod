@@ -9,6 +9,8 @@ tasks:
     command: sudo docker-up
   - name: ddev_run
     command: |
+      brew upgrade ddev
+      mkcert -install
       # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
       while ! docker ps 2>/dev/null; do
         sleep 1
