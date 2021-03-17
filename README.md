@@ -34,8 +34,8 @@ Watch a 5 minutes walkthrough video:
 ## Do you like PhpStorm instead of Theia or VScode?
 
 1. Open a bash window at the bottom
-2. `projector run`
-3. When it shows you port 9999 is up, click the link and use PhpStorm
+2. `.ddev/run-phpstorm.sh`
+3. When it shows you port 9999 is up, click the link and use PhpStorm with this repo.
 
 ## How does it work?
 1. Gitpod - development environment based on Docker
