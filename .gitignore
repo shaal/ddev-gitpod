@@ -202,6 +202,7 @@ circleci/database/*
 /web/sites/default/drushrc.php
 
 # Gitpod
+.ddev/docker-compose.host-docker-internal.yaml
 .ddev/docker-compose.xdebug-ip.yaml
 .ddev/config.fqdns.yaml
 .ddev/config.gitpod-overrides.yaml

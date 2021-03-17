@@ -4,7 +4,7 @@ image:
 # Use 'lock file' to delay running ddev until it is installed
 # https://www.gitpod.io/blog/gitpodify/#running-init-scripts
 tasks:
-  # Wait 5 seconds for `sudo docker-up` to run, before starting ddev 
+  # Wait 5 seconds for `sudo docker-up` to run, before starting ddev
   - name: ddev_run
     command: |
       sleep 5
@@ -16,6 +16,8 @@ tasks:
 
 # Set the following ports public
 ports:
+  - port: 6492
+    onOpen: ignore
   - port: 8080
   - port: 8025
     onOpen: ignore
@@ -27,6 +29,7 @@ ports:
     onOpen: ignore
   - port: 8443
     onOpen: ignore
+  - port: 9999
 
 github:
   prebuilds:
