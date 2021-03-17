@@ -31,6 +31,12 @@ Watch a 5 minutes walkthrough video:
 1. Open your website's URL in a browser.
 1. :tada:
 
+## Do you like PhpStorm instead of Theia or VScode?
+
+1. Open a bash window at the bottom
+2. `projector run`
+3. When it shows you port 9999 is up, click the link and use PhpStorm
+
 ## How does it work?
 1. Gitpod - development environment based on Docker
     1. [.gitpod.yml](https://github.com/shaal/ddev-gitpod/blob/main/.gitpod.yml)
