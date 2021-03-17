@@ -5,6 +5,8 @@ image:
 # https://www.gitpod.io/blog/gitpodify/#running-init-scripts
 tasks:
   # Wait 5 seconds for `sudo docker-up` to run, before starting ddev
+  - name: docker_up
+    command: sudo docker-up
   - name: ddev_run
     command: |
       # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
@@ -13,10 +15,6 @@ tasks:
       done
       .ddev/gitpod-setup-ddev.sh
   - init: composer install
-  - name: docker_up
-    command: sudo docker-up
-  - name: bash
-    command: bash
 
 
 # Set the following ports public
