@@ -4,14 +4,19 @@ image:
 # Use 'lock file' to delay running ddev until it is installed
 # https://www.gitpod.io/blog/gitpodify/#running-init-scripts
 tasks:
-  # Wait 5 seconds for `sudo docker-up` to run, before starting ddev 
+  # Wait 5 seconds for `sudo docker-up` to run, before starting ddev
   - name: ddev_run
     command: |
-      sleep 5
+      # Wait for docker to come up before doing gitpod setup (make requires docker)
+      while ! docker ps; do
+        sleep 1
+      done
       .ddev/gitpod-setup-ddev.sh
   - init: composer install
   - name: docker_up
     command: sudo docker-up
+  - name: spare_bash
+    command: bash
 
 
 # Set the following ports public
