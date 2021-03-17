@@ -21,7 +21,7 @@ tasks:
 
 # Set the following ports public
 ports:
-  - port: 6492
+  - port: 6942
     onOpen: ignore
   - port: 8080
   - port: 8025
