@@ -65,12 +65,8 @@ Watch a 5 minutes walkthrough video:
 
 ### Known issues:
 * Once these Gitpod issues get resolved, starting a workspace will happen much faster:
-    * [#2428 - `sudo docker-up` cannot run during prebuild](https://github.com/gitpod-io/gitpod/issues/2428)
+    * ~~[#2428 - `sudo docker-up` cannot run during prebuild](https://github.com/gitpod-io/gitpod/issues/2428)~~
     * [#3174 - Permissions in docker images are lost during gitpod restore](https://github.com/gitpod-io/gitpod/issues/3174)
 
 ### Future:
 * [Figure out storage solutions](https://www.gitpod.io/docs/self-hosted/latest/install/storage)
-* [PHPStorm as IDE on Gitpod](https://jetbrains.github.io/projector-client/mkdocs/latest/)
-  * [WIP] [I can run PHPStorm in a browser on my computer, but not on Gitpod](https://community.gitpod.io/t/running-phpstorm-through-projector-in-gitpod/2760)
-  * `docker run --rm -p 8887:8887 -it registry.jetbrains.team/p/prj/containers/projector-phpstorm`
-  * [Latest JetBrains' status update](https://youtrack.jetbrains.com/issue/IDEA-226455#focus=Comments-27-4683103.0-0)
