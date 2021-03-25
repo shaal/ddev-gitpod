@@ -8,13 +8,13 @@ tasks:
   - init: sudo docker-up &
   # Wait for docker to come up before running ddev
   - init: |
-    brew upgrade ddev
-    mkcert -install
-    # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
-    while ! docker ps 2>/dev/null; do
-      sleep 1
-    done
-    .ddev/gitpod-setup-ddev.sh
+      brew upgrade ddev
+      mkcert -install
+      # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
+      while ! docker ps 2>/dev/null; do
+        sleep 1
+      done
+      .ddev/gitpod-setup-ddev.sh
 
   # Running composer install, docker-up, and start ddev
   - name: composer
