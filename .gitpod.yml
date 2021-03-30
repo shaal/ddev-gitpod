@@ -16,7 +16,7 @@ tasks:
         sleep 1
       done
       .ddev/gitpod-setup-ddev.sh
-  - init: composer install
+  - prebuild: composer install
 
 
 # Set the following ports public
