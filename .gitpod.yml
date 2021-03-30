@@ -4,34 +4,34 @@ image:
 # ddev and composer are running as part of the prebuild
 # when workspace gets loaded all docker images are ready
 tasks:
-  - init: composer install
-  - init: sudo docker-up &
-  # Wait for docker to come up before running ddev
-  - init: |
-      brew upgrade ddev
-      mkcert -install
-      # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
-      while ! docker ps 2>/dev/null; do
-        sleep 1
-      done
-      .ddev/gitpod-setup-ddev.sh
+  - prebuild: composer install
+  # - prebuild: sudo docker-up &
+  # # Wait for docker to come up before running ddev
+  # - prebuild: |
+  #     brew upgrade ddev
+  #     mkcert -install
+  #     # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
+  #     while ! docker ps 2>/dev/null; do
+  #       sleep 1
+  #     done
+  #     .ddev/gitpod-setup-ddev.sh
 
   # Running composer install, docker-up, and start ddev
-  - name: composer
-    command: composer install
-  - name: docker-up
-    openMode: split-right
-    command: sudo docker-up
-  - name: ddev_run
-    openIn: left
-    command: |
-      brew upgrade ddev
-      mkcert -install
-      # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
-      while ! docker ps 2>/dev/null; do
-        sleep 1
-      done
-      .ddev/gitpod-setup-ddev.sh
+  # - name: composer
+  #   command: composer install
+  # - name: docker-up
+  #   openMode: split-right
+  #   command: sudo docker-up
+  # - name: ddev_run
+  #   openIn: left
+  #   command: |
+  #     brew upgrade ddev
+  #     mkcert -install
+  #     # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
+  #     while ! docker ps 2>/dev/null; do
+  #       sleep 1
+  #     done
+  #     .ddev/gitpod-setup-ddev.sh
 
 
 # Set the following ports public
