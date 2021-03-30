@@ -35,6 +35,13 @@ services:
     - "host.docker.internal:${hostip}"
 COMPOSEEND
 
+# Wait for 'sudo docker-up' before running ddev.
+echo -n "Please run 'sudo docker-up' on another terminal for ddev to run."
+while ! docker ps 2>/dev/null; do
+  echo -n "."
+  sleep 1
+done
+
 # Misc housekeeping before start
 ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
 
