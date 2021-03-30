@@ -4,9 +4,9 @@ image:
 # ddev and composer are running as part of the prebuild
 # when workspace gets loaded all docker images are ready
 tasks:
-  - prebuild: composer install
-  - prebuild: brew upgrade ddev
-  - prebuild: mkcert -install
+  # - prebuild: composer install
+  # - prebuild: brew upgrade ddev
+  # - prebuild: mkcert -install
   - prebuild: sudo docker-up &
   - prebuild: .ddev/gitpod-setup-ddev.sh
 
