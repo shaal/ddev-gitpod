@@ -7,13 +7,10 @@ tasks:
   - prebuild: composer install
   - prebuild: sudo docker-up &
   # Wait for docker to come up before running ddev
-  - prebuild: |
+  - name: ddev
+    prebuild: |
       brew upgrade ddev
       mkcert -install
-      # # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
-      # while ! docker ps 2>/dev/null; do
-      #   sleep 1
-      # done
       sleep 10
       .ddev/gitpod-setup-ddev.sh
 
