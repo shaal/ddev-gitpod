@@ -4,7 +4,13 @@ image:
 # ddev and composer are running as part of the prebuild
 # when workspace gets loaded all docker images are ready
 tasks:
-  - prebuild: composer install && (sudo docker-up &) && .ddev/gitpod-setup-ddev.sh
+  - prebuild: |
+      composer install
+      sudo docker-up &
+      sleep 5
+      ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
+      ddev start
+  #  .ddev/gitpod-setup-ddev.sh
 
   # Running composer install, docker-up, and start ddev
   # - name: composer
