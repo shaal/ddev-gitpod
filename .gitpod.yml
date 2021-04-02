@@ -12,7 +12,8 @@ tasks:
     command: |
       composer install
       .ddev/gitpod-setup-ddev.sh
-  - command: sudo docker-up &
+  - openMode: split-right
+    command: sudo docker-up
 
 # Set the following ports public
 ports:
