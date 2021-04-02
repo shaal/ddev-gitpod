@@ -4,16 +4,17 @@ image:
 # ddev and composer are running as part of the prebuild
 # when starting a workspace all docker images are ready
 tasks:
-  - prebuild: |
+  - name: ddev
+    prebuild: |
       sudo docker-up &
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
     command: |
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
-      echo Your website is available at this url:
-      gp url 8080
-  - openMode: split-right
+      gp preview $(gp url 8080)
+  - name: docker-up
+    openMode: split-right
     command: sudo docker-up
 
 # Set the following ports public
