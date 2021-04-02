@@ -5,13 +5,13 @@ image:
 # when starting a workspace all docker images are ready
 tasks:
   - prebuild: |
-      composer install
       sudo docker-up &
       ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
       .ddev/gitpod-setup-ddev.sh
+      ddev composer install
     command: |
-      composer install
       .ddev/gitpod-setup-ddev.sh
+      ddev composer install
   - openMode: split-right
     command: sudo docker-up
 
