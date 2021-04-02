@@ -6,12 +6,13 @@ image:
 tasks:
   - prebuild: |
       sudo docker-up &
-      ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
     command: |
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
+      echo Your website is available at this url:
+      gp url 8080
   - openMode: split-right
     command: sudo docker-up
 
