@@ -13,15 +13,13 @@ Watch a 5 minutes walkthrough video:
 
 ## Prerequisites:
 1. [Sign up for gitpod.io](https://gitpod.io/login)
-1. Check [Enable Feature Preview](https://gitpod.io/settings) (To allow running docker inside docker)
 
 ## Try it out:
 1. Click on the following link
   https://gitpod.io/#https://github.com/shaal/ddev-gitpod
-1. Your environment is being prepared, wait for about 40 seconds (A splash screen will appear with a 3d Gitpod cube)
-1. Theia (or VScode) IDE will be displayed.
+1. Your environment is being prepared, wait about 40 seconds (A splash screen will appear)
+1. VScode (or Theia) IDE will be displayed.
 1. Note that one terminal is running `sudo docker-up`, and another terminal in parallel is running `ddev start`
-1. ddev will pull all required Docker images.
 1. Find your website's URL `gp url 8080`
 1. Open your website's URL in a browser, you should see Drupal's installation screen.
 1. Run in terminal `ddev drush si demo_umami -y`
@@ -32,7 +30,6 @@ Watch a 5 minutes walkthrough video:
 1. :tada:
 
 ## Do you like PhpStorm instead of Theia or VScode?
-
 1. Open a bash window at the bottom
 2. `.ddev/run-phpstorm.sh`
 3. When it shows you port 9999 is up, click the link and use PhpStorm with this repo.
@@ -62,11 +59,6 @@ Watch a 5 minutes walkthrough video:
 ## Thank you
 [@rfay](https://github.com/rfay) for your endless patience and relentless support that made this project possible.
 
-
-### Known issues:
-* Once these Gitpod issues get resolved, starting a workspace will happen much faster:
-    * ~~[#2428 - `sudo docker-up` cannot run during prebuild](https://github.com/gitpod-io/gitpod/issues/2428)~~
-    * [#3174 - Permissions in docker images are lost during gitpod restore](https://github.com/gitpod-io/gitpod/issues/3174)
-
-### Future:
-* [Figure out storage solutions](https://www.gitpod.io/docs/self-hosted/latest/install/storage)
+### Persistant Storage:
+* Gitpod backs up the state of the `/workspace/` folder between workspace starts, so that you can revisit them later. Attention: Files in other locations will not be saved!
+* [Additional Storage Solutions](https://www.gitpod.io/docs/self-hosted/latest/install/storage)
