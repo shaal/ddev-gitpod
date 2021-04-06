@@ -14,7 +14,7 @@ tasks:
     command: |
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
-      gp preview $(gp url 8080)
+      gp await-port 8080 && gp preview $(gp url 8080)
 
 # Set the following ports public
 ports:
