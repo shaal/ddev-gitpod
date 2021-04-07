@@ -11,7 +11,7 @@ tasks:
       sudo docker-up &
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
-    command: |
+    init: |
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
       gp await-port 8080 && gp preview $(gp url 8080)
