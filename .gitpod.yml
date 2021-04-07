@@ -5,7 +5,7 @@ image:
 # when starting a workspace all docker images are ready
 tasks:
   - name: docker-up
-    command: sudo docker-up
+    init: sudo docker-up
   - name: ddev
     prebuild: |
       sudo docker-up &
