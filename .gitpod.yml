@@ -1,23 +1,20 @@
 image:
   file: .gitpod.Dockerfile
 
-# Use 'lock file' to delay running ddev until it is installed
-# https://www.gitpod.io/blog/gitpodify/#running-init-scripts
+# ddev and composer are running as part of the prebuild
+# when starting a workspace all docker images are ready
 tasks:
-  # Wait 5 seconds for `sudo docker-up` to run, before starting ddev
-  - name: docker_up
+  - name: docker-up
     command: sudo docker-up
-  - name: ddev_run
-    command: |
-      brew upgrade ddev
-      mkcert -install
-      # Wait for docker to come up before doing gitpod setup (gitpod-setup requires docker)
-      while ! docker ps 2>/dev/null; do
-        sleep 1
-      done
+  - name: ddev
+    prebuild: |
+      sudo docker-up &
       .ddev/gitpod-setup-ddev.sh
-  - prebuild: composer install
-
+      ddev composer install
+    command: |
+      .ddev/gitpod-setup-ddev.sh
+      ddev composer install
+      gp await-port 8080 && gp preview $(gp url 8080)
 
 # Set the following ports public
 ports:

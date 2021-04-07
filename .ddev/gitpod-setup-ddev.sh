@@ -6,18 +6,6 @@ set -eu -o pipefail
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# Remove docker containers and specific docker images,
-# because of gitpod bug: https://github.com/gitpod-io/gitpod/issues/3174
-containers_found="$(docker ps -aq)"
-if [[ ! -z "$containers_found" ]]; then
-    docker rm -f $containers_found || true
-fi
-
-images_found="$(docker images | awk '/^drud\/ddev-(webserver|ssh-agent|dbserver)/ { print $3 }')"
-if [[ ! -z "$images_found" ]]; then
-    docker rmi -f $images_found
-fi
-
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
 shortgpurl="${GITPOD_WORKSPACE_URL#'https://'}"
@@ -47,9 +35,14 @@ services:
     - "host.docker.internal:${hostip}"
 COMPOSEEND
 
+# Wait for 'sudo docker-up' before running ddev.
+echo -n "Please run 'sudo docker-up' on another terminal for ddev to run."
+while ! docker ps 2>/dev/null; do
+  echo -n "."
+  sleep 1
+done
+
 # Misc housekeeping before start
 ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
 
 ddev start
-echo Your website is available at this url:
-gp url 8080
