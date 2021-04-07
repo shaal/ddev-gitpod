@@ -46,5 +46,3 @@ done
 ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
 
 ddev start
-echo Your website is available at this url:
-gp url 8080

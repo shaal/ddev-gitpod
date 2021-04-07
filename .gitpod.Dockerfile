@@ -12,3 +12,4 @@ RUN projector install 'PhpStorm 2020.3.3' --no-auto-run
 
 # Install ddev
 RUN brew update && brew install drud/ddev/ddev && mkcert -install
+
