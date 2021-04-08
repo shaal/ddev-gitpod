@@ -4,7 +4,7 @@
 
 set -eu -o pipefail
 
-MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+MYDIR=.ddev
 
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
