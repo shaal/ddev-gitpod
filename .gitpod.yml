@@ -1,5 +1,5 @@
 image:
-  file: .gitpod.Dockerfile
+  file: .gitpod/.gitpod.Dockerfile
 
 # ddev and composer are running as part of the prebuild
 # when starting a workspace all docker images are ready
