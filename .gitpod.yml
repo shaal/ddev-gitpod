@@ -32,7 +32,14 @@ ports:
     onOpen: ignore
   - port: 8443
     onOpen: ignore
+  - port: 9000
+    onOpen: ignore
   - port: 9999
+
+
+vscode:
+  extensions:
+    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
 
 github:
   prebuilds:
