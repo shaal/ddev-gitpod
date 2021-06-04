@@ -9,14 +9,11 @@ RUN sudo apt-get -qq install -y python3 python3-pip python3-crypto libxext6 libx
 RUN python3 -m pip install -U pip
 # Install Projector
 RUN pip3 install projector-installer --user
-RUN source ~/.profile
-# Install Projector
-RUN pip3 install projector-installer
 
 # Install PhpStorm
 # Prevents projector install from asking for the license acceptance
 RUN mkdir -p ~/.projector/configs
-RUN projector install 'PhpStorm 2021.1.3' --no-auto-run
+RUN ~/.local/bin/projector install 'PhpStorm 2021.1.3' --no-auto-run
 
 # Install brew
 RUN git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
