@@ -22,7 +22,7 @@ RUN ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin
 RUN eval $(~/.linuxbrew/bin/brew shellenv)
 
 # Install ddev
-RUN brew install drud/ddev/ddev
+RUN ~/.linuxbrew/bin/brew install drud/ddev/ddev
 
 ###
 ### Initiate a rebuild of Gitpod's image by updating this comment #1
