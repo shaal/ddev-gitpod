@@ -16,13 +16,11 @@ RUN mkdir -p ~/.projector/configs
 RUN projector install 'PhpStorm 2021.1.3' --no-auto-run
 
 # Install brew
-RUN git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
-RUN mkdir ~/.linuxbrew/bin
-RUN ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin
-RUN eval $(~/.linuxbrew/bin/brew shellenv)
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+RUN echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/gitpod/.profile
 
 # Install ddev
-RUN ~/.linuxbrew/Homebrew/bin/brew install drud/ddev/ddev
+RUN /home/linuxbrew/.linuxbrew/bin/brew install drud/ddev/ddev
 
 ###
 ### Initiate a rebuild of Gitpod's image by updating this comment #1
