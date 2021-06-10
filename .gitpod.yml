@@ -30,7 +30,10 @@ ports:
     onOpen: ignore
   - port: 8443
     onOpen: ignore
-  - port: 9999
+  - port: 8888
+    onOpen: ignore
+  - port: 8889
+    onOpen: ignore
 
 github:
   prebuilds:
