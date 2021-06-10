@@ -21,6 +21,8 @@ services:
   web:
     extra_hosts:
     - "host.docker.internal:${hostip}"
+    ports:
+    - 8080:80
 COMPOSEEND
 
 ddev start -y
