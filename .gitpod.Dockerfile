@@ -8,7 +8,8 @@ RUN sudo apt-get -qq install -y python3 python3-pip libxext6 libxrender1 libxtst
 RUN pip3 install projector-installer
 # Install PhpStorm
 RUN mkdir -p ~/.projector/configs  # Prevents projector install from asking for the license acceptance
-RUN projector install 'PhpStorm 2021.1' --no-auto-run
+# As long as #8 remains PhpStorm, this installs the newest PhpStorm
+RUN printf "8\nN\n1\n" | projector install --no-auto-run
 
 # Install ddev
 RUN brew update && brew install drud/ddev/ddev && mkcert -install
