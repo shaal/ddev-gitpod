@@ -5,7 +5,7 @@ image:
 # when starting a workspace all docker images are ready
 tasks:
   - name: ddev
-    prebuild: |
+    init: |
       export DDEV_NONINTERACTIVE=true
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
