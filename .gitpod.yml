@@ -9,7 +9,7 @@ tasks:
       export DDEV_NONINTERACTIVE=true
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
-      ddev drush si -y --account-pass=admin
+      ddev drush si -y --account-pass=admin --site-name='ddev_gitpod' demo_umami
     command: |
       .ddev/gitpod-setup-ddev.sh
       ddev composer install
