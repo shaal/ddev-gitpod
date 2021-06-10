@@ -6,10 +6,6 @@ set -eu -o pipefail
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# Generate a config.gitpod.yaml that adds the gitpod
-# proxied ports so they're known to ddev.
-shortgpurl="${GITPOD_WORKSPACE_URL#'https://'}"
-
 # We need host.docker.internal inside the container,
 # So add it via docker-compose.host-docker-internal.yaml
 hostip=$(awk "\$2 == \"$HOSTNAME\" { print \$1; }" /etc/hosts)
@@ -25,4 +21,4 @@ services:
     - 8080:80
 COMPOSEEND
 
-ddev start -y
+yes | ddev start
