@@ -53,7 +53,6 @@ ports:
     visibility: private
   # projector port
   - port: 9999
-    onOpen: open-preview
     visibility: private
 
 github:
