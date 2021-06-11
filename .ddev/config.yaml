@@ -7,4 +7,6 @@ router_http_port: "8888"
 router_https_port: "8889"
 mariadb_version: "10.3"
 mysql_version: ""
-use_dns_when_possible: false
+provider: default
+use_dns_when_possible: true
+composer_version: ""
