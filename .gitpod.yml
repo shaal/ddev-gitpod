@@ -22,7 +22,6 @@ ports:
     visibility: private
   # Direct-connect ddev-webserver port that is the main port
   - port: 8080
-    onOpen: ignore
     visibility: private
   # Currently un-notified and unsupported mailhog http port
   - port: 8025
