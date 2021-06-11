@@ -15,7 +15,6 @@ tasks:
       ddev composer install
       gp await-port 8080 && gp preview $(gp url 8080)
 
-# Set the following ports public
 ports:
   # Used by projector
   - port: 6942
