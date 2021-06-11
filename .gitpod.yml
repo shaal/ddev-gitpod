@@ -22,8 +22,8 @@ ports:
     visibility: private
   # Direct-connect ddev-webserver port that is the main port
   - port: 8080
-    visibility: private
     onOpen: open-preview
+    visibility: private
   # Currently un-notified and unsupported mailhog http port
   - port: 8025
     onOpen: ignore
@@ -50,11 +50,12 @@ ports:
     visibility: private
   # xdebug port
   - port: 9000
+    onOpen: ignore
     visibility: private
   # projector port
   - port: 9999
-    visibility: private
     onOpen: open-preview
+    visibility: private
 
 github:
   prebuilds:
