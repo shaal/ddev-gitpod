@@ -14,10 +14,10 @@ cat <<CONFIGEND > ${MYDIR}/config.gitpod.yaml
 #ddev-gitpod-generated
 use_dns_when_possible: false
 
-additional_fqdns:
-- 8888-${shortgpurl}
-- 8025-${shortgpurl}
-- 8036-${shortgpurl}
+# Throwaway ports, otherwise Gitpod throw an error 'port needs to be > 1024'
+router_http_port: "8888"
+router_https_port: "8889"
+
 CONFIGEND
 
 # We need host.docker.internal inside the container,
