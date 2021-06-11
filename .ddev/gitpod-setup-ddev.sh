@@ -14,6 +14,10 @@ cat <<CONFIGEND > ${MYDIR}/config.gitpod.yaml
 #ddev-gitpod-generated
 use_dns_when_possible: false
 
+# Throwaway ports, otherwise Gitpod throw an error 'port needs to be > 1024'
+router_http_port: "8888"
+router_https_port: "8889"
+
 additional_fqdns:
 - 8888-${shortgpurl}
 - 8025-${shortgpurl}
