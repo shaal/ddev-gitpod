@@ -12,12 +12,14 @@ shortgpurl="${GITPOD_WORKSPACE_URL#'https://'}"
 
 cat <<CONFIGEND > ${MYDIR}/config.gitpod.yaml
 #ddev-gitpod-generated
-router_http_port: 8080
-router_https_port: 8443
 use_dns_when_possible: false
 
+# Throwaway ports, otherwise Gitpod throw an error 'port needs to be > 1024'
+router_http_port: "8888"
+router_https_port: "8889"
+
 additional_fqdns:
-- 8080-${shortgpurl}
+- 8888-${shortgpurl}
 - 8025-${shortgpurl}
 - 8036-${shortgpurl}
 CONFIGEND
@@ -33,9 +35,14 @@ services:
   web:
     extra_hosts:
     - "host.docker.internal:${hostip}"
+    # This adds 8080 on the host (bound on all interfaces)
+    # It goes directly to the web container without
+    # ddev-nginx
+    ports:
+    - 8080:80
 COMPOSEEND
 
 # Misc housekeeping before start
-ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true
+ddev config global --router-bind-all-interfaces
 
-ddev start
+yes | ddev start
