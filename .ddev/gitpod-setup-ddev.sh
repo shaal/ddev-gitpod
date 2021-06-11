@@ -18,6 +18,10 @@ use_dns_when_possible: false
 router_http_port: "8888"
 router_https_port: "8889"
 
+additional_fqdns:
+- 8888-${shortgpurl}
+- 8025-${shortgpurl}
+- 8036-${shortgpurl}
 CONFIGEND
 
 # We need host.docker.internal inside the container,
