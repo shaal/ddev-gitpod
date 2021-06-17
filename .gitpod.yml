@@ -6,6 +6,7 @@ image:
 tasks:
   - name: Terminal
     init: |
+      export DDEV_NONINTERACTIVE=true
       .gitpod/setup-ddev.sh
       ddev start
       ddev composer install
