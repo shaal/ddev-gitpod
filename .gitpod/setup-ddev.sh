@@ -4,13 +4,13 @@
 
 set -eu -o pipefail
 
-MYDIR="$GITPOD_REPO_ROOT"/.ddev
+DDEV_DIR="$GITPOD_REPO_ROOT"/.ddev
 
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
 shortgpurl="${GITPOD_WORKSPACE_URL#'https://'}"
 
-cat <<CONFIGEND > "${MYDIR}"/config.gitpod.yaml
+cat <<CONFIGEND > "${DDEV_DIR}"/config.gitpod.yaml
 #ddev-gitpod-generated
 use_dns_when_possible: false
 
@@ -28,7 +28,7 @@ CONFIGEND
 # So add it via docker-compose.host-docker-internal.yaml
 hostip=$(awk "\$2 == \"$HOSTNAME\" { print \$1; }" /etc/hosts)
 
-cat <<COMPOSEEND >"${MYDIR}"/docker-compose.host-docker-internal.yaml
+cat <<COMPOSEEND >"${DDEV_DIR}"/docker-compose.host-docker-internal.yaml
 #ddev-gitpod-generated
 version: "3.6"
 services:
