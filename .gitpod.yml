@@ -15,6 +15,11 @@ tasks:
       ddev composer install
       gp await-port 8080 && gp preview $(gp url 8080)
 
+# VScode xdebug extension
+vscode:
+  extensions:
+    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
+
 ports:
   # Used by projector
   - port: 6942
