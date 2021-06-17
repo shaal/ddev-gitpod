@@ -4,7 +4,7 @@
 
 set -eu -o pipefail
 
-DDEV_DIR="$GITPOD_REPO_ROOT"/.ddev
+DDEV_DIR="$GITPOD_REPO_ROOT/.ddev"
 
 # Generate a config.gitpod.yaml that adds the gitpod
 # proxied ports so they're known to ddev.
@@ -43,4 +43,4 @@ services:
 COMPOSEEND
 
 # Misc housekeeping before start
-ddev config global --router-bind-all-interfaces
+ddev config global --instrumentation-opt-in=true --router-bind-all-interfaces=true

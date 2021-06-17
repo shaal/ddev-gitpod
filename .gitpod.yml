@@ -6,14 +6,12 @@ image:
 tasks:
   - name: Terminal
     init: |
-      export DDEV_NONINTERACTIVE=true
+      .gitpod/download-ddev-images.sh
       .gitpod/setup-ddev.sh
-      ddev start
       ddev composer install
       ddev drush si -y --account-pass=admin --site-name='ddev_gitpod' demo_umami
     command: |
       .gitpod/setup-ddev.sh
-      ddev start
       ddev composer install
       gp await-port 8080 && gp preview $(gp url 8080)
 
