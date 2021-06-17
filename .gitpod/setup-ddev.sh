@@ -44,4 +44,3 @@ COMPOSEEND
 
 # Misc housekeeping before start
 ddev config global --router-bind-all-interfaces
-export DDEV_NONINTERACTIVE=true
