@@ -18,7 +18,9 @@ tasks:
 # VScode xdebug extension
 vscode:
   extensions:
-    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
+    - felixfbecker.php-debug@1.13.0
+    - bmewburn.vscode-intelephense-client
+    - ziyasal.vscode-open-in-github
 
 ports:
   # Used by projector
