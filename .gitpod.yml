@@ -18,7 +18,7 @@ tasks:
 # VScode xdebug extension
 vscode:
   extensions:
-    - felixfbecker.php-debug@1.13.0
+    - felixfbecker.php-debug
     - bmewburn.vscode-intelephense-client
     - ziyasal.vscode-open-in-github
 
