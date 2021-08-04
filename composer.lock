@@ -1273,16 +1273,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "08ad826a9ccd193e9a2e717f75c9f6fac3274a79"
+                "reference": "e9c75c8e2d1395aebb19cad17d6a514945636ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/08ad826a9ccd193e9a2e717f75c9f6fac3274a79",
-                "reference": "08ad826a9ccd193e9a2e717f75c9f6fac3274a79",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e9c75c8e2d1395aebb19cad17d6a514945636ecf",
+                "reference": "e9c75c8e2d1395aebb19cad17d6a514945636ecf",
                 "shasum": ""
             },
             "require": {
@@ -1520,11 +1520,14 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2021-07-20T21:42:48+00:00"
+            "support": {
+                "source": "https://github.com/drupal/core/tree/9.2.3"
+            },
+            "time": "2021-08-03T13:14:21+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1567,11 +1570,14 @@
             "keywords": [
                 "drupal"
             ],
+            "support": {
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.3"
+            },
             "time": "2021-07-10T22:39:33+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1605,20 +1611,23 @@
             "keywords": [
                 "drupal"
             ],
+            "support": {
+                "source": "https://github.com/drupal/core-project-message/tree/9.2.3"
+            },
             "time": "2020-09-14T13:40:36+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "06a84abc067304e9280fde292a382ca6bce82ee1"
+                "reference": "20feef210c8506a8cc903bd5ef9ef90dec89e71e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/06a84abc067304e9280fde292a382ca6bce82ee1",
-                "reference": "06a84abc067304e9280fde292a382ca6bce82ee1",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/20feef210c8506a8cc903bd5ef9ef90dec89e71e",
+                "reference": "20feef210c8506a8cc903bd5ef9ef90dec89e71e",
                 "shasum": ""
             },
             "require": {
@@ -1627,7 +1636,7 @@
                 "doctrine/annotations": "1.13.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.2.2",
+                "drupal/core": "9.2.3",
                 "egulias/email-validator": "2.1.25",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.1",
@@ -1689,7 +1698,10 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2021-07-20T21:42:48+00:00"
+            "support": {
+                "source": "https://github.com/drupal/core-recommended/tree/9.2.3"
+            },
+            "time": "2021-08-03T13:14:21+00:00"
         },
         {
             "name": "drush/drush",
@@ -2901,6 +2913,10 @@
                 "archive",
                 "tar"
             ],
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Archive_Tar",
+                "source": "https://github.com/pear/Archive_Tar"
+            },
             "funding": [
                 {
                     "url": "https://github.com/mrook",
@@ -6338,5 +6354,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }
