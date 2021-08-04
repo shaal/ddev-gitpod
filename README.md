@@ -59,6 +59,6 @@ Watch a 5 minutes walkthrough video:
 ## Thank you
 [@rfay](https://github.com/rfay) for your endless patience and relentless support that made this project possible.
 
-### Persistant Storage:
+### Persistent Storage:
 * Gitpod backs up the state of the `/workspace/` folder between workspace starts, so that you can revisit them later. Attention: Files in other locations will not be saved!
 * [Additional Storage Solutions](https://www.gitpod.io/docs/self-hosted/latest/install/storage)
