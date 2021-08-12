@@ -1577,7 +1577,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.2.3",
+            "version": "9.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1612,7 +1612,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.2.3"
+                "source": "https://github.com/drupal/core-project-message/tree/9.2.4"
             },
             "time": "2020-09-14T13:40:36+00:00"
         },
