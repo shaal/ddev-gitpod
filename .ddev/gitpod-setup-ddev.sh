@@ -42,6 +42,14 @@ services:
     - 8080:80
 COMPOSEEND
 
+# Forces proper external base URL.
+DRUPAL_BASE=$(gp url 8888)
+mkdir -p web/sites/all/drush
+cat <<DRUSH_CFG > web/sites/all/drush/drush.yml
+options:
+  uri: "$DRUPAL_BASE"
+DRUSH_CFG
+
 # Misc housekeeping before start
 ddev config global --router-bind-all-interfaces
 
