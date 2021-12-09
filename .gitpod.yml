@@ -45,7 +45,6 @@ ports:
     onOpen: ignore
   # projector port
   - port: 9999
-    visibility: private
 
 github:
   prebuilds:
