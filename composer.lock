@@ -1545,7 +1545,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.3.4",
+            "version": "9.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
