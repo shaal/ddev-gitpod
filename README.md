@@ -9,6 +9,7 @@ This project demonstrates a complete Drupal 9 development environment, utilizing
 
 ## Video Demo
 
+### An updated video demo is coming ###
 Watch a 5 minutes walkthrough video:
 
 <a href="http://www.youtube.com/watch?v=ifk5dF6rGy0"><img src="https://user-images.githubusercontent.com/22901/107867673-c6fc7080-6e4a-11eb-81c9-542cd779026b.png" width=300 alt="Setup a full Drupal dev environment in a browser"></a>
