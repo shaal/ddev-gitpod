@@ -5,7 +5,7 @@
 
 This project demonstrates a complete Drupal 9 development environment, utilizing ddev and Gitpod, through your browser.  
 
-##This is a branch from @shaal - creates a blank Drupal site instead of a Unami Demo##
+## This is a branch from @shaal - creates a blank Drupal site instead of a Unami Demo ##
 
 ## Video Demo
 
