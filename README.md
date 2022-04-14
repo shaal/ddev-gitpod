@@ -16,9 +16,9 @@ Watch a 5 minutes walkthrough video:
 
 ## Try it out:
 1. Click on the following link
-  https://gitpod.io/#https://github.com/shaal/ddev-gitpod
+  https://gitpod.io/#https://github.com/imrodmartin/ddev-gitpod
 1. Your environment is being prepared, wait about 40 seconds (A splash screen will appear)
-1. VScode IDE will be displayed, a few seconds later you will see Umami demo.
+1. VScode IDE will be displayed, a few seconds later you will see a fresh blank Drupal site.
 1. Run in terminal `ddev xdebug on`
 1. Open VScode's debugger, place a new breakpoint in `web/index.php`
 1. Open your website's URL in a browser.
