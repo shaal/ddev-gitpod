@@ -19,7 +19,7 @@ Watch a 5 minutes walkthrough video:
 
 ## Try it out:
 1. Click on the following link
-  <a href="https://gitpod.io/#https://github.com/imrodmartin/ddev-gitpod" target="_blank">https://github.com/imrodmartin/ddev-gitpod</a>
+  <a href="https://gitpod.io/#https://github.com/imrodmartin/ddev-gitpod" target="_blank">https://gitpod.io/#https://github.com/imrodmartin/ddev-gitpod</a>
 1. Your environment is being prepared, wait about 40 seconds (A splash screen will appear)
 1. VScode IDE will be displayed, a few seconds later you will see a fresh blank Drupal site.
 1. Open your website's URL in a browser (at the bottom of the terminal window)
