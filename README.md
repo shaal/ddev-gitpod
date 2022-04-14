@@ -19,9 +19,7 @@ Watch a 5 minutes walkthrough video:
   https://gitpod.io/#https://github.com/imrodmartin/ddev-gitpod
 1. Your environment is being prepared, wait about 40 seconds (A splash screen will appear)
 1. VScode IDE will be displayed, a few seconds later you will see a fresh blank Drupal site.
-1. Run in terminal `ddev xdebug on`
-1. Open VScode's debugger, place a new breakpoint in `web/index.php`
-1. Open your website's URL in a browser.
+1. Open your website's URL in a browser (at the bottom of the terminal window)
 1. :tada:
 
 ## Do you like PhpStorm instead of Theia or VScode?
@@ -35,7 +33,7 @@ Watch a 5 minutes walkthrough video:
         1. Run prebuild commands:
             1. Start ddev
             1. Run `composer install`
-            1. Install Umami demo website
+            1. Installs blank Drupal website
     1. [.gitpod.Dockerfile](https://github.com/shaal/ddev-gitpod/blob/main/.gitpod.Dockerfile)
         1. Set base image to Gitpod's `workspace-full` ([link](https://github.com/gitpod-io/workspace-images/tree/master/full))
         1. Install ddev using brew
