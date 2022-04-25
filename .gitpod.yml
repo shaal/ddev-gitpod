@@ -10,6 +10,8 @@ tasks:
     command: |
       ddev start -y
       gp await-port 8080 && gp preview $(gp url 8080)
+      ddev composer require drupal/admin_toolbar
+
 
 # VScode xdebug extension
 vscode:
