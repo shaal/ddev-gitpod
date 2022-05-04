@@ -6,7 +6,7 @@ tasks:
   - init: |
       ddev start -y
       ddev composer install
-      ddev drush si -y --account-pass=admin --site-name='ddev_gitpod'
+      ddev drush si -y --account-pass=admin --site-name='Drupal Training 101'
     command: |
       ddev start -y
       gp await-port 8080 && gp preview $(gp url 8080)
