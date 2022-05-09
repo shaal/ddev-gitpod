@@ -5,7 +5,8 @@ image: drupalpod/drupalpod-gitpod-base:20220322
 tasks:
   - init: |
       ddev start -y
-      ddev composer install
+#      ddev composer install
+      ddev composer create-project promet/provus-drupal
       ddev drush si -y --account-pass=admin --site-name='Drupal Training 101'
     command: |
       ddev start -y
