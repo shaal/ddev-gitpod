@@ -1545,16 +1545,16 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.3.16",
+            "version": "9.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "69664743736977676e11f824301ea3e925a712fc"
+                "reference": "5dfa0b75a057caf6542be67f61e7531c737db48c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/69664743736977676e11f824301ea3e925a712fc",
-                "reference": "69664743736977676e11f824301ea3e925a712fc",
+                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/5dfa0b75a057caf6542be67f61e7531c737db48c",
+                "reference": "5dfa0b75a057caf6542be67f61e7531c737db48c",
                 "shasum": ""
             },
             "require": {
@@ -1580,9 +1580,9 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.3.16"
+                "source": "https://github.com/drupal/core-project-message/tree/9.4.0"
             },
-            "time": "2022-02-24T17:40:56+00:00"
+            "time": "2022-02-24T17:40:53+00:00"
         },
         {
             "name": "drupal/core-recommended",
@@ -6387,5 +6387,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
