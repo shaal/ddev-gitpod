@@ -9,7 +9,8 @@ This project demonstrates a complete Drupal 9 development environment, utilizing
 
 ## Video Demo
 
-<a href="https://www.youtube.com/watch?v=r0uL4OIJMv0" target="_blank"><img src="https://imrodmartin.com/images/hqdefault.jpg" width=300 alt="Setup a full Drupal dev environment in a browser"></a>
+<iframe src="https://player.vimeo.com/video/699619764?h=1bab4e5cd8&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/699619764">gitpod-instructions</a> from <a href="https://vimeo.com/imrodmartin">imrodmartin</a></p>
 
 ## Prerequisites:
 1. [Sign up for gitpod.io](https://gitpod.io/login)
