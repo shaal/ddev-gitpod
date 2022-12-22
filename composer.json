@@ -1,6 +1,6 @@
 {
     "name": "drupal/recommended-project",
-    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "description": "Project template for Drupal 10 projects with a relocated document root",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/drupal",
@@ -18,8 +18,9 @@
         "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
-        "drush/drush": "^10.3"
+        "drupal/core-recommended": "^10",
+        "drupal/lupus_decoupled": "^1.0@alpha",
+        "drush/drush": "^11"
     },
     "conflict": {
         "drupal/drupal": "*"

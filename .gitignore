@@ -206,3 +206,6 @@ circleci/database/*
 .ddev/docker-compose.xdebug-ip.yaml
 .ddev/config.fqdns.yaml
 .ddev/config.gitpod-overrides.yaml
+
+# Composer
+composer.lock
