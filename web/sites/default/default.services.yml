@@ -72,7 +72,7 @@ parameters:
     #
     # Enabling Twig debugging is not recommended in production environments.
     # @default false
-    debug: false
+    debug: true
     # Twig auto-reload:
     #
     # Automatically recompile Twig templates whenever the source code changes.
