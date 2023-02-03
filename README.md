@@ -1,7 +1,7 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/shaal/ddev-gitpod)
 
 # ddev + Gitpod
-## Set up a full Drupal dev environment in a browser
+## Set up a full Drupal dev environment in a browser (now using Drupal 10!)
 
 This project demonstrates a <strong>complete Drupal 10</strong> (10.0.3) development environment, utilizing ddev and Gitpod, through your browser.  
 
