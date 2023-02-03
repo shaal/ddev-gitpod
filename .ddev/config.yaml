@@ -13,7 +13,7 @@ mysql_version: ""
 nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
-composer_version: ""
+composer_version: "2"
 web_environment: []
 
 # Key features of ddev's config.yaml:
