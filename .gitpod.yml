@@ -4,8 +4,7 @@ image: drupalpod/drupalpod-gitpod-base:20221021
 tasks:
   - init: |
       ddev start -y
-      ddev composer install      
-#      ddev composer require drush/drush
+      ddev composer install
       ddev drush si -y --account-pass=admin --site-name='Drupal Training' 
     command: |
       ddev start -y
