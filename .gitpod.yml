@@ -5,7 +5,7 @@ tasks:
   - init: |
       ddev start -y
       ddev composer install      
-      ddev composer drush/drush
+      ddev composer require drush/drush
       ddev drush si -y --account-pass=admin --site-name='Drupal Training' 
     command: |
       ddev start -y
