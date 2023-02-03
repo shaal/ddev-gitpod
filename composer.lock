@@ -439,7 +439,7 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.0.x",
+            "version": "10.0.3",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core/zipball/4bb40a72c5f187094aa762db985bcbdfc06f30ec",
@@ -597,7 +597,7 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.0.x",
+            "version": "10.0.3",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/e3f17745ab88a919f5179e6d9c1ac8ce77d3845f",
@@ -642,7 +642,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "10.0.x",
+            "version": "10.0.3",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-project-message/zipball/b4bb5b4c67242def27c2abf5892e5d9bfb7d08f1",
@@ -678,7 +678,7 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "10.0.x",
+            "version": "10.0.3",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-recommended/zipball/8796ccb265716dc5d6fd6e166ab15b6bd84fd14a",
@@ -690,7 +690,7 @@
                 "composer/semver": "~3.3.2",
                 "doctrine/annotations": "~1.13.3",
                 "doctrine/lexer": "~1.2.3",
-                "drupal/core": "10.0.x",
+                "drupal/core": "10.0.3",
                 "egulias/email-validator": "~3.2.1",
                 "guzzlehttp/guzzle": "~7.5.0",
                 "guzzlehttp/promises": "~1.5.2",
@@ -5140,7 +5140,7 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.0.x",
+            "version": "10.0.3",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core-dev/zipball/4671fe2e965a5ed31c91e3f3b012b28b0eee4629",
