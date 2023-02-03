@@ -15,10 +15,10 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
+        "composer/installers": "^2.0",
+        "drupal/core-composer-scaffold": "^10",
+        "drupal/core-project-message": "^10",
+        "drupal/core-recommended": "^910",
         "drush/drush": "^10.3"
     },
     "conflict": {
