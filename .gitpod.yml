@@ -1,11 +1,11 @@
-image: drupalpod/drupalpod-gitpod-base:20220322
+image: drupalpod/drupalpod-gitpod-base:20221216
 # ddev and composer are running as part of the prebuild
 # when starting a workspace all docker images are ready
 tasks:
   - init: |
       ddev start -y
       ddev composer install
-      ddev drush si -y --account-pass=admin --site-name='Drupal Training' 
+      ddev drush si -y --account-pass=admin --site-name='Drupal Training'
     command: |
       ddev start -y
       gp ports await 8080 && gp preview $(gp url 8080)
