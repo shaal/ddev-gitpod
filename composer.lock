@@ -1383,16 +1383,16 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.1.5",
+            "version": "10.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "1ccd7db5ff8a5425b5bbba9b9a05e366363c0a51"
+                "reference": "6a2d817ccb59fdb7e6b3720a1478b0d00b475445"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/1ccd7db5ff8a5425b5bbba9b9a05e366363c0a51",
-                "reference": "1ccd7db5ff8a5425b5bbba9b9a05e366363c0a51",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/6a2d817ccb59fdb7e6b3720a1478b0d00b475445",
+                "reference": "6a2d817ccb59fdb7e6b3720a1478b0d00b475445",
                 "shasum": ""
             },
             "require": {
@@ -1417,6 +1417,7 @@
                     "Drupal\\Composer\\Plugin\\Scaffold\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -1424,7 +1425,11 @@
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.1.7"
+            },
+            "time": "2023-11-15T23:23:43+00:00"
         },
         {
             "name": "drupal/core-project-message",
